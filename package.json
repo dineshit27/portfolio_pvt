@@ -1,14 +1,10 @@
 {
-  "dependencies": {
-    "firebase": "^11.10.0"
-  },
+  "name": "portfolio-parent",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^7.3.1"
+    "dev": "npm --prefix Portfolio run dev",
+    "build": "npm --prefix Portfolio run build",
+    "lint": "npm --prefix Portfolio run lint",
+    "preview": "npm --prefix Portfolio run preview"
   }
 }
