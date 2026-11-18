@@ -7,7 +7,7 @@ export function Leetcode() {
     <SectionBackground>
       <section id="leetcode">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="Coding isn't just practice — it's how I sharpen problem-solving daily 🚀">Leetcode Progress</SectionTitle>
+          <SectionTitle subtitle="Coding isn't just practice - it's how I sharpen problem-solving daily 🚀">Leetcode Progress</SectionTitle>
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* LeetCode Stats Card */}

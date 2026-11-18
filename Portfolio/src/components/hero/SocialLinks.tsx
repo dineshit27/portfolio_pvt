@@ -1,6 +1,28 @@
 import { Github, Linkedin, Twitter } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { SiLeetcode, SiCodeforces } from 'react-icons/si';
+import { SiLeetcode } from 'react-icons/si';
+
+function SkillRackIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Top-left: filled blue square */}
+      <rect x="1" y="1" width="10" height="10" rx="1" fill="#4A9BD9" />
+      {/* Top-right: outlined square with checkmark */}
+      <rect x="13" y="1" width="10" height="10" rx="1" fill="none" stroke="#3A7BAD" strokeWidth="1.5" />
+      <path d="M15.5 6.5L17.5 8.5L21 4.5" stroke="#2D2D2D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Bottom-left: outlined square with code brackets */}
+      <rect x="1" y="13" width="10" height="10" rx="1" fill="none" stroke="#3A7BAD" strokeWidth="1.5" />
+      <path d="M5 16L3 18L5 20" stroke="#2D2D2D" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 16L10 18L8 20" stroke="#2D2D2D" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Bottom-right: filled blue square */}
+      <rect x="13" y="13" width="10" height="10" rx="1" fill="#4A9BD9" />
+    </svg>
+  );
+}
 
 const links = [
   {
@@ -18,14 +40,10 @@ const links = [
     icon: <Twitter className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'X',
   },
-  {
-    href: 'https://wa.me/918122129450',
-    icon: <FaWhatsapp className="w-6 h-6 text-[#25D366]" />,
-    label: 'WhatsApp',
-  },
+
   {
     href: 'https://www.skillrack.com/faces/resume.xhtml?id=444147&key=Skillrackresume430',
-    icon: <SiCodeforces className="w-6 h-6 text-[#1F8ACB]" />,
+    icon: <SkillRackIcon className="w-6 h-6" />,
     label: 'SkillRack',
   },
   {
@@ -35,10 +53,21 @@ const links = [
   },
 ];
 
-export function SocialLinks() {
+export interface SocialLink {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}
+
+interface SocialLinksProps {
+  extraLinks?: SocialLink[];
+}
+
+export function SocialLinks({ extraLinks = [] }: SocialLinksProps) {
+  const allLinks = [...links, ...extraLinks];
   return (
     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-      {links.map(({ href, icon, label }) => (
+      {allLinks.map(({ href, icon, label }) => (
         <a
           key={href}
           href={href}

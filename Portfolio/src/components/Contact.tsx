@@ -1,7 +1,9 @@
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ContactForm } from './ui/ContactForm';
-import { Github, Linkedin, Mail, Instagram, MessageCircle, Twitter, PenTool, Calendar } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, MessageCircle, Twitter, Calendar } from 'lucide-react';
+import { SocialCards } from './SocialCards';
+import { ShineBorder } from './ui/shine-border';
 
 export function Contact() {
   return (
@@ -12,7 +14,8 @@ export function Contact() {
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
             {/* Left Column: Contact Info */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div className="relative overflow-hidden bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+              <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
               <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Let's Connect</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
@@ -67,7 +70,7 @@ export function Contact() {
                   <span>@_dinx_pvt_430</span>
                 </a>
                 <a
-                  href="https://wa.me/919122129450"
+                  href="https://wa.me/918122129450"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-green-600 transition-colors"
@@ -88,10 +91,14 @@ export function Contact() {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div className="relative overflow-hidden bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+              <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
               <ContactForm />
             </div>
           </div>
+
+          {/* Social Media Cards */}
+          <SocialCards />
 
           {/* Location Map: Guduvanchery */}
           <div className="max-w-5xl mx-auto mt-12">

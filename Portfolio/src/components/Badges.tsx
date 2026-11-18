@@ -5,6 +5,7 @@ import { SectionBackground } from "./ui/SectionBackground";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ShineBorder } from "./ui/shine-border";
 
 const CustomPrevArrow = (props: any) => {
   const { onClick } = props;
@@ -33,6 +34,13 @@ const CustomNextArrow = (props: any) => {
 };
 
 const badges = [
+  {
+    id: "vibe-coding Hackathon",
+    platform: "Zephoria'26",
+    title: "Vibe Coding Winner",
+    image: "assets/vibecoding.jpg",
+    profile: "https://www.credly.com/badges/acc5fa97-0b4e-47c2-bc59-30e2d2a0161a/public_url",
+  },
   {
     id: "github-foundations",
     platform: "GitHub",
@@ -177,8 +185,13 @@ export function Badges() {
           <SectionTitle subtitle="Milestones that reflect the journey of continuous growth and mastery 🏆">
             Achieved Badges
           </SectionTitle>
+          <div className="max-w-6xl mx-auto text-center mb-10">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Each badge marks a moment when curiosity turned into a skill worth proving. From GitHub workflows to hundreds of focused LeetCode streaks, these milestones capture the patience, practice, and curiosity behind my journey.
+            </p>
+          </div>
           <div className="max-w-6xl mx-auto relative pb-24">
-            <Slider {...settings} className="">
+            <Slider {...settings} className="badge-carousel py-6">
               {badges.map((badge) => (
                 <div key={badge.id} className="px-4">
                   <a
@@ -187,6 +200,7 @@ export function Badges() {
                     rel="noopener noreferrer"
                     className="relative group flex flex-col items-center justify-center p-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
                   >
+                    <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl blur-lg transition-all duration-300" />
 

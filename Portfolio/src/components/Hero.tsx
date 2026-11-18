@@ -10,14 +10,13 @@ export function Hero() {
   const [isHovering, setIsHovering] = useState(false);
 
   const roles = [
-    "Web Developer",
+    "Full Stack Developer",
+    "AI Engineer",
     "UI/UX Designer",
     "Graphic Designer",
     "Professional Freelancer",
     "Code Enthusiast",
-    "Digital Marketer",
     "Digital Creator",
-     
   ];
 
   return (
@@ -43,9 +42,9 @@ export function Hero() {
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient flex items-center justify-center gap-2">
                 M. Dinesh
-                <img 
-                  src="/assets/verified-badge.png" 
-                  alt="Verified Badge" 
+                <img
+                  src="/assets/verified-badge.png"
+                  alt="Verified Badge"
                   className="w-7 h-7 lg:w-9 lg:h-9"
                 />
               </h1>
@@ -69,9 +68,9 @@ export function Hero() {
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-              src={isHovering ? '/assets/profilegif.gif' : '/assets/pp.png'}
+              src={isHovering ? '/assets/profilegif.gif' : '/assets/blue dinesh.png'}
               alt="M Dinesh"
-              className="relative w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              className="relative mt-4 w-full max-w-lg mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             />

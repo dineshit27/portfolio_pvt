@@ -45,6 +45,14 @@ const CustomNextArrow = ({ onClick }: ArrowProps) => {
 
 const achievements: AchievementItem[] = [
   {
+    title: "Technical Jury - ByteBlaze",
+    issuer: "Saveetha Engineering College",
+    date: "Jul 2026",
+    link: "#",
+    image: "assets/jury.jpeg",
+  },
+
+  {
     title: "Winner - Idea Forge",
     issuer: "Sri Sairam Engineering College",
     date: "Oct 2025",

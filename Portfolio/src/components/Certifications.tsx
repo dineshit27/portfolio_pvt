@@ -35,31 +35,52 @@ const CustomNextArrow = (props: any) => {
 
 const certifications = [
   {
-    title: "Getting Started with Full Stack Java Development",
-    issuer: "Simplilearn",
-    date: "Jun 2024",
-    image: "assets/fullstack.jpg",
-    link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxOTEwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODQ3MTQ4M184ODMzNDA4MTc1MDAwMTY5MTg2MC5wbmciLCJ1c2VybmFtZSI6Ik0uIERpbmVzaCJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4495%2FGetting%2520Started%2520with%2520Full%2520Stack%2520Java%2520Development%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1469300024069529568&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVd891No4KKK%2FyCE2yrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAr5jf8D8AAAA%3D",
+    title: "AI Essentials Specialization",
+    issuer: "Google",
+    date: "Jun 2026",
+    image: "assets/googleaii.jpg",
+    link: "https://www.coursera.org/account/accomplishments/specialization/H1RNAD2C2PED",
+  },
+
+  {
+    title: "Full Stack Developer Specialization",
+    issuer: "Meta",
+    date: "Oct 2026",
+    image: "assets/metafs.jpeg",
+    link:"https://www.coursera.org/account/accomplishments/specialization/XX021L83RE4Z",
+  },
+  {
+    title: "AWS Cloud Technical Essentials",
+    issuer: "AWS",
+    date: "Oct 2026",
+    image: "assets/awscloud.jpeg",
+    link:"https://www.coursera.org/account/accomplishments/verify/285QUXGZN0J0",
+  },
+  {
+    title: "Foundation Course on AI Readliness",
+    issuer: "Ministry of Information and Broadcasting",
+    date: "Jul 2026",
+    image: "assets/aired.jpg",
   },
   {
     title: "GitHub Foundations",
     issuer: "GitHub",
     date: "May 2025",
-    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9?trk=share_certificate",
+    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9",
     image: "assets/github.jpg",
   },
   {
     title: "Graphic Design Essentials",
     issuer: "Canva",
     date: "Mar 2025",
-    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9?trk=share_certificate",
+    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9",
     image: "assets/graphicdesign.jpg",
   },
   {
     title: "Generative AI",
     issuer: "Microsoft & LinkedIn",
     date: "Jan 2025",
-    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9?trk=share_certificate",
+    link: "https://www.linkedin.com/learning/certificates/5ff7a51b5ab179d785d5deb67abb6ab3e3ec09664736b2aab1d1e31630a388d9",
     image: "assets/genai.jpg",
   },
   {

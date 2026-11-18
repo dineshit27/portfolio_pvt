@@ -10,7 +10,7 @@ const aboutSections = [
     icon: User2,
     title: "Who I Am",
     description: [
-      "A web developer having interest in software engineering.",
+      "A Full Stack Developer having interest in Development roles.",
       "Enjoy solving problems and building scalable applications.",
       "Always learning new technologies to improve my skills.",
     ],
@@ -31,7 +31,7 @@ const aboutSections = [
     title: "My Goals",
     description: [
       "Build tech products that solve real-world challenges at scale.",
-      "Advance as a web developer with modern frameworks.",
+      "Advance as a Full Stack Developer with modern frameworks.",
       "Grow the dev community through open-source contributions.",
     ],
     color: "bg-green-600",
@@ -130,10 +130,7 @@ export function About() {
           >
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Hey there! 👋 I'm <span className="text-blue-600 font-semibold">M Dinesh</span>,
-              a B.Tech Information Technology student passionate about building web web applications that solve real-world problems.
-              I've created projects like Aquawatt for monitor the usage of water and electricity.
-              With skills in React, JavaScript, Node.js, and Python, I love exploring new technologies, solving DSA problems and working on AI-powered solutions.
-            </p>
+            a B.Tech IT student who loves turning ideas into real-world software. From building IoT solutions like AquaWatt to experimenting with AI-powered products like Procura AI, I'm always curious about what's possible with technology. I enjoy coding, solving problems, exploring new tools, and building things that make a difference. For me, every idea is a chance to create something meaningful.</p>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}

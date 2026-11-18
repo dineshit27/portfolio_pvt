@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { Github } from "lucide-react";
+import { ShineBorder } from "./ui/shine-border";
 
 interface Repo {
   name: string;
@@ -65,50 +66,7 @@ export function GitHub() {
     <SectionBackground>
       <section id="github">
         <div className="container mx-auto max-w-6xl px-8">
-          <SectionTitle subtitle="Code that lives, breathes, and contributes — open source and beyond 👾">GitHub Contributions</SectionTitle>
-
-          {/* ── Stat Cards ── */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            {[
-              {
-                src: 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=dineshit27&theme=github_dark',
-                alt: 'GitHub Profile Details',
-                label: 'Profile Overview',
-              },
-              {
-                src: 'https://streak-stats.demolab.com/?user=dineshit27&theme=dark&hide_border=true&background=0D1117&stroke=30363d&ring=58a6ff&fire=ff6b6b&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e',
-                alt: 'GitHub Streak Stats',
-                label: 'Contribution Streak',
-              },
-            ].map((card, i) => (
-              <motion.div
-                key={card.alt}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.12 }}
-                whileHover={{ scale: 1.012, y: -4 }}
-                className="group relative min-w-0 w-full overflow-hidden rounded-2xl border border-gray-700/50 bg-[#0d1117] shadow-lg transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_32px_rgba(88,166,255,0.18)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
-                <img
-                  src={card.src}
-                  alt={card.alt}
-                  className="w-full h-auto block rounded-2xl"
-                  loading="lazy"
-                  onError={(e) => {
-                    const el = e.target as HTMLImageElement;
-                    el.style.display = 'none';
-                    const parent = el.parentElement;
-                    if (parent) {
-                      parent.style.minHeight = '160px';
-                      parent.innerHTML += `<div style="display:flex;align-items:center;justify-content:center;width:100%;min-height:160px;color:#8b949e;font-size:0.875rem;">${card.label} unavailable</div>`;
-                    }
-                  }}
-                />
-              </motion.div>
-            ))}
-          </div>
+          <SectionTitle subtitle="Code that lives, breathes, and contributes - open source and beyond 👾">GitHub Contributions</SectionTitle>
 
           {/* Top Repositories */}
           <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
@@ -123,8 +81,9 @@ export function GitHub() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="block p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+                className="relative block overflow-hidden p-6 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
               >
+                <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
                 <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
                   {repo.name}
                 </h3>
@@ -150,8 +109,9 @@ export function GitHub() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.02 }}
-              className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg"
+              className="relative flex flex-col md:flex-row items-center justify-between overflow-hidden bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg p-6 shadow-lg"
             >
+              <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
               {/* Avatar & Name */}
               <div className="flex items-center space-x-4">
                 <motion.img

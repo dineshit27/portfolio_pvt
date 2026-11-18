@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from './Link';
 import { SocialLinks } from './hero/SocialLinks';
 import { FaReact } from 'react-icons/fa';
-import { SiVite } from 'react-icons/si';
+import { SiVite, SiInstagram, SiWhatsapp, SiGmail } from 'react-icons/si';
 
 interface FooterLinkProps {
   href: string;
@@ -34,6 +34,7 @@ export function Footer() {
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
+    { href: '#blogs', label: 'Blogs' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -51,7 +52,25 @@ export function Footer() {
 
           {/* Social Links */}
           <div className="scale-90">
-            <SocialLinks />
+            <SocialLinks 
+              extraLinks={[
+                {
+                  href: 'https://www.instagram.com/_dinx_pvt_430',
+                  icon: <SiInstagram className="w-6 h-6 text-[#E4405F]" />,
+                  label: 'Instagram',
+                },
+                {
+                  href: 'https://wa.me/918122129450',
+                  icon: <SiWhatsapp className="w-6 h-6 text-[#25D366]" />,
+                  label: 'WhatsApp',
+                },
+                {
+                  href: 'mailto:m.dinesh.it27@gmail.com',
+                  icon: <SiGmail className="w-6 h-6 text-[#EA4335]" />,
+                  label: 'Gmail',
+                },
+              ]}
+            />
           </div>
 
           {/* Copyright */}

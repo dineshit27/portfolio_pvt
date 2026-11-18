@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
-import './index.css';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import './index.pcss';
 
 // Apply initial theme before render to prevent flash
 const savedTheme = localStorage.getItem('theme');
@@ -14,6 +15,8 @@ if (isDark) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </StrictMode>
 );

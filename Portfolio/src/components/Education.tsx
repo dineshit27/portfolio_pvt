@@ -8,7 +8,7 @@ const education = [
     degree: 'B.Tech in Information Technology',
     institution: 'Sri Sairam Institution of Technology, Chennai',
     period: '2023 - 2027',
-    score: '78%',
+    score: '75%',
     logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl0slFCxtSvrL4phitUZ5EA_pD7P6UHEuxPQ&s',
   },
   {

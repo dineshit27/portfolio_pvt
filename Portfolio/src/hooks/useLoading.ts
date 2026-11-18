@@ -7,7 +7,7 @@ export function useLoading() {
     // Increased duration to allow for the full animation sequence
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Reduced timeout to show page faster during development
+    }, 4000); // Wait for the full animation sequence (approx 3.6s) to complete
 
     return () => clearTimeout(timer);
   }, []);

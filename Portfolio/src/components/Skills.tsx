@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { LogoLoop, LogoItem } from "./ui/LogoLoop";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiRedux, SiGit, SiGithub, SiVercel, SiBootstrap, SiMysql, SiMongodb, SiCanva, SiFigma, SiTailwindcss, SiSupabase, SiArduino, SiN8N, SiGoogleanalytics, SiMeta, SiNotion } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiRedux, SiGit, SiGithub, SiVercel, SiBootstrap, SiMysql, SiMongodb, SiCanva, SiFigma, SiTailwindcss, SiSupabase, SiArduino, SiN8N, SiGoogleanalytics, SiMeta, SiNotion, SiRender, SiZapier, SiFastapi, SiOpencv, SiTensorflow, SiHuggingface, SiGooglegemini } from "react-icons/si";
 import { FaNodeJs, FaPython, FaJava, FaMicrosoft } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFirebase } from "react-icons/io5";
 import { BiBrain } from "react-icons/bi";
-import { Heart, FlaskConical } from "lucide-react";
+import { Heart, FlaskConical, Bot, BrainCircuit, Sparkles } from "lucide-react";
 import type { IconType } from "react-icons";
 import type { LucideIcon } from "lucide-react";
 
@@ -44,6 +44,15 @@ const skillCategories: SkillCategory[] = [
       { name: "MongoDB", icon: SiMongodb, color: "#13aa52", url: "https://www.mongodb.com/" },
       { name: "Firebase", icon: IoLogoFirebase, color: "#ffca28", url: "https://firebase.google.com/" },
       { name: "Supabase", icon: SiSupabase, color: "#3ECF8E", url: "https://supabase.com/" },
+      { name: "FastAPI", icon: SiFastapi, color: "#05998B", url: "https://fastapi.tiangolo.com/" },
+      { name: "Gemini API", icon: SiGooglegemini, color: "#8E75FF", url: "https://ai.google.dev/" },
+      { name: "OpenCV", icon: SiOpencv, color: "#5C3EE8", url: "https://opencv.org/" },
+      { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00", url: "https://www.tensorflow.org/" },
+      { name: "Ultralytics YOLO", imageSrc: "/assets/ultralytics-yolo.png", color: "#111827", url: "https://docs.ultralytics.com/" },
+      { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E", url: "https://huggingface.co/" },
+      { name: "AI Agent", icon: Bot, color: "#8B5CF6", url: "https://www.anthropic.com/research/building-effective-agents" },
+      { name: "LLM", icon: BrainCircuit, color: "#0EA5E9", url: "https://en.wikipedia.org/wiki/Large_language_model" },
+      { name: "Generative AI", icon: Sparkles, color: "#EC4899", url: "https://cloud.google.com/use-cases/generative-ai" },
       { name: "Vercel", icon: SiVercel, url: "https://vercel.com/" },
     ],
   },
@@ -51,6 +60,8 @@ const skillCategories: SkillCategory[] = [
     name: "Tools",
     items: [
       { name: "n8n", icon: SiN8N, color: "#F05A2A", url: "https://n8n.io/" },
+      { name: "Zapier", icon: SiZapier, color: "#FF4F00", url: "https://zapier.com/" },
+      { name: "Render", icon: SiRender, color: "#46e3b7", url: "https://render.com/" },
       { name: "Git", icon: SiGit, color: "#f34f29", url: "https://git-scm.com/" },
       { name: "GitHub", icon: SiGithub, url: "https://github.com/" },
       { name: "Lovable.dev", icon: Heart, color: "#ff6b9d", url: "https://lovable.dev/" },
@@ -65,6 +76,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Analytics", icon: SiGoogleanalytics, color: "#e37400", url: "https://analytics.google.com/" },
       { name: "Meta Ads", icon: SiMeta, color: "#0668E1", url: "https://www.facebook.com/business/ads" },
       { name: "Notion AI", icon: SiNotion, url: "https://www.notion.so/" },
+      { name: "Claude AI", imageSrc: "/assets/claude.png", color: "#D97757", url: "https://claude.ai/" },
     ],
   },
 ];
@@ -132,8 +144,8 @@ export function Skills() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${activeFilter === option.value
-                    ? "border-blue-500 bg-blue-500 text-white shadow-lg"
-                    : "border-gray-300 text-gray-700 hover:border-blue-400 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300"
+                  ? "border-blue-500 bg-blue-500 text-white shadow-lg"
+                  : "border-gray-300 text-gray-700 hover:border-blue-400 hover:text-blue-500 dark:border-gray-700 dark:text-gray-300"
                   }`}
               >
                 {option.label}

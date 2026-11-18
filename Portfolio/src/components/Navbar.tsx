@@ -83,6 +83,7 @@ export function Navbar() {
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },
+    { href: '#blogs', label: 'Blogs' },
   ];
 
   return (
@@ -154,7 +155,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-5 items-center relative">
-            {navLinks.map((link) => (
+            {navLinks.filter(link => link.href !== '#badges').map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

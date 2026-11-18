@@ -1,6 +1,7 @@
 import React from "react";
 import { Briefcase } from "lucide-react";
 import { CompanyLogo } from "./CompanyLogo";
+import { ShineBorder } from "./shine-border";
 
 interface ExperienceCardProps {
   title: string;
@@ -23,7 +24,8 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div className="relative group">
-      <div className="relative bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+      <div className="relative overflow-hidden bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+        <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
         
         <div className="relative z-10">
           {/* Header */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { IconType } from "react-icons";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface SkillCardProps {
   name: string;

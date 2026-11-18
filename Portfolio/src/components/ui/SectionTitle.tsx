@@ -7,8 +7,9 @@ interface SectionTitleProps {
 }
 
 export function SectionTitle({ children, subtitle, className = '' }: SectionTitleProps) {
+  const hasMarginBottom = className.split(' ').some(c => c.includes('mb-'));
   return (
-    <div className={`mb-10 relative ${className}`}>
+    <div className={`${hasMarginBottom ? '' : 'mb-10'} relative ${className}`}>
       <div className="flex flex-col text-center items-center">        
         {/* Main Title */}
         <h2 className="relative group">

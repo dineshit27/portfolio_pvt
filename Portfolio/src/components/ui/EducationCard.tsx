@@ -1,6 +1,7 @@
 import React from "react";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 import { CompanyLogo } from "./CompanyLogo";
+import { ShineBorder } from "./shine-border";
 
 interface EducationCardProps {
   degree: string;
@@ -24,7 +25,8 @@ export function EducationCard({
   index = 0
 }: EducationCardProps) {
   return (
-    <div className="relative group bg-white dark:bg-gray-900 p-4 sm:p-8 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+    <div className="relative group overflow-hidden bg-white dark:bg-gray-900 p-4 sm:p-8 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
       
       <div className="relative z-10 flex items-start gap-6">
         

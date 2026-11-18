@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -13,43 +13,46 @@ import { Badges } from './components/Badges';
 import { Experience } from './components/Experience';
 import { Certifications } from './components/Certifications';
 import { Education } from './components/Education';
+import { Blogs } from './components/Blogs';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { CustomCursor } from "./components/ui/CustomCursor";
 import { ScrollToTop } from "./components/ui/ScrollToTop";
+import { ScrollProgressBar } from "./components/ui/ScrollProgressBar";
 import { Analytics } from '@vercel/analytics/react';
 import { LoadingScreen } from './components/loading/LoadingScreen';
-import { useLoading } from './hooks/useLoading';
 
 function App() {
-  const isLoading = useLoading();
+  const [isIntroComplete, setIsIntroComplete] = useState(false);
 
   return (
     <>
-      <LoadingScreen isLoading={isLoading} />
-      {!isLoading && (
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-opacity duration-500 opacity-100">
-          <CustomCursor />
-          <Navbar />
-          <Hero />
-          <About />
-          <Services />
-          <FreelanceHighlights />
-          <Skills />
-          <Achievements />
-          <Projects />
-          <GitHub />
-          <Leetcode />
-          <Badges />
-          <Experience />
-          <Certifications />
-          <Education />
-          <Contact />
-          <Footer />
-          <ScrollToTop />
-          <Analytics />
-        </div>
+      {!isIntroComplete && (
+        <LoadingScreen onComplete={() => setIsIntroComplete(true)} />
       )}
+      <div className={`min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-opacity duration-500 ${!isIntroComplete ? 'h-screen overflow-hidden' : ''}`}>
+        <ScrollProgressBar />
+        <CustomCursor />
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <FreelanceHighlights />
+        <Skills />
+        <Achievements />
+        <Projects />
+        <GitHub />
+        <Leetcode />
+        <Badges />
+        <Experience />
+        <Certifications />
+        <Education />
+        <Blogs />
+        <Contact />
+        <Footer />
+        <ScrollToTop />
+        <Analytics />
+      </div>
     </>
   );
 }
